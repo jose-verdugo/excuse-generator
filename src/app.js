@@ -2,10 +2,30 @@
 import "bootstrap";
 import "./style.css";
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
-
 window.onload = function() {
   //write your code here
-  console.log("Hello Rigo from the console!");
+  let who = ["the dog", "my granma", "his turtle", "my bird"];
+  let what = ["eat", "pissed", "crushed", "broked"];
+  let when = [
+    "before the class",
+    "right in time",
+    "when I finished",
+    "during my lunch",
+    "while I was praying"
+  ];
+
+  function random(array1, array2, array3) {
+    const randomWord1 = Math.floor(Math.random() * array1.length);
+    const randomWord2 = Math.floor(Math.random() * array2.length);
+    const randomWord3 = Math.floor(Math.random() * array3.length);
+    let randomWord = `${array1[randomWord1]}  ${array2[randomWord2]} ${array3[randomWord3]}`;
+    return randomWord;
+  }
+  console.log(random(who, what, when));
+
+  // const excuse = document.querySelector("#excuse");
+  const button = document.querySelector("#btn");
+  button.addEventListener("click", e => {
+    document.querySelector("#excuse").innerHTML = random(who, what, when);
+  });
 };
