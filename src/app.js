@@ -21,11 +21,11 @@ window.onload = function() {
     let randomWord = `${array1[randomWord1]}  ${array2[randomWord2]} ${array3[randomWord3]}`;
     return randomWord;
   }
-  console.log(random(who, what, when));
 
-  // const excuse = document.querySelector("#excuse");
   const button = document.querySelector("#btn");
-  button.addEventListener("click", e => {
+  button.addEventListener("click", () => {
     document.querySelector("#excuse").innerHTML = random(who, what, when);
   });
 };
+
+// https://github.com/jose-verdugo/excuse-generator.git
