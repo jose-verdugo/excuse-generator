@@ -22,9 +22,9 @@ window.onload = function() {
     return randomWord;
   }
 
-  const button = document.querySelector("#btn");
+  const button = document.querySelector(".btn");
   button.addEventListener("click", () => {
-    document.querySelector("#excuse").innerHTML = random(who, what, when);
+    document.querySelector(".excuse").innerHTML = random(who, what, when);
   });
 };
 
